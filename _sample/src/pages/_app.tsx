@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { Header } from "src/components/Header";
 import { Layout } from "src/components/Layout";
 import { Todo } from "src/types";
@@ -8,6 +8,8 @@ const TODOS: Todo[] = [
   { id: 1, text: "foo", isDone: false },
   { id: 2, text: "bar", isDone: false },
 ];
+
+//引数に初期値
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [todos, setTodos] = useState<Todo[]>(TODOS);
