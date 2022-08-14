@@ -20,6 +20,7 @@ export const TodoContext = createContext<{
 })
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  //useCreateで参照すると上手くいかない
   const [todos, setTodos] = useState<Todo[]>(TODOS);
 
   return (
